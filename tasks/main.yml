@@ -1,0 +1,10 @@
+---
+ - name: installing apache2
+   apt:
+     name: apache2
+     state: present
+     update_cache: yes
+ - name: copying index.html file
+   copy:
+     src: files/index.html
+     dest: /var/www/html
